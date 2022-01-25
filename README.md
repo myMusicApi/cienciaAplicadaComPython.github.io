@@ -4,4 +4,4 @@ Este repositório representa uma página WEB com artigos contendo algoritmos que
 
 É uma iniciativa para apoiar a junção entre ciências e computação.
 
-Acesse (Ciência Aplicada com Python)[https://cienciaaplicadacompython.github.io/].
+Acesse [Ciência Aplicada com Python](https://cienciaaplicadacompython.github.io/).
