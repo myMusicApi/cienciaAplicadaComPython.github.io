@@ -1,0 +1,117 @@
+@font-face{
+    font-family: “vijaya”;       
+    font-style: normal;       
+    font-weight: 400;       
+    src: local(‘vijaya’), url(vijaya.ttf);         
+}
+
+*{
+    font-family: vijaya;
+    text-decoration: none;
+}
+
+table, th, td{
+    margin-left: auto; 
+    margin-right: auto;
+    border: 0.1em solid #000000;
+    padding: 0.5em;
+}
+
+th{
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+#menu_site_title{
+    top: 0em;
+    left: 0em;
+    position: absolute;
+    display: flex;
+    height: 3.5em;
+    width: 100%;
+}
+
+#site_title{
+    flex: 3;
+    background-color: #000000;
+    text-align: center;
+    font-size: 0.6em;
+    color: #FFFFFF;
+}
+
+#menu{
+    flex: 1;
+    overflow-y: auto;
+    border-style: solid;
+    border-color: #333333;
+    border-width: 0.25em;
+}
+
+#menu a{
+    background-color: #000000;
+    color: #FFFFFF;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 0.75em;
+}
+
+#menu a:hover{
+    background-color: #0000FF;
+}
+
+.articles_list_items {
+    color: #000000;
+}
+
+.articles_list_items:hover {
+    color: #0000FF;
+}
+
+#page_text{
+    background-color: #FFFFFF;
+    top: 3em;
+    left: 0em;
+    width: 99.5%;
+    position: absolute;
+    margin-left: 0.5%;
+    text-align: left;
+    font-size: 1.5em;
+    color: black;
+}
+
+#page_text #algoritmo_section{
+    background-color: #EB7D5B;
+    border-style: none none none solid;
+    border-color: #FF0000;
+    border-radius: 0.5em;
+    border-width: 1em;
+}
+
+#page_text #colete_dados_em_campo_section{
+    background-color: #FED23F;
+    border-style: none none none solid;
+    border-color: #FFFF00;
+    border-radius: 0.5em;
+    border-width: 1em;
+}
+
+#page_text #aperte_o_play_section{
+    background-color: #B5D33D;
+    border-style: none none none solid;
+    border-color: #00FF00;
+    border-radius: 0.5em;
+    border-width: 1em;
+}
+
+#page_text #conclusao_section{
+    background-color: #6CA2EA;
+    border-style: none none none solid;
+    border-color: #0000FF;
+    border-radius: 0.5em;
+    border-width: 1em;
+}
+
+#image_width{
+    width: 75%;
+}
