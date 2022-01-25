@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<!--
+    This represents an article.
+    Author: Jefferson David Santos e Silva
+    Email: j.davidss@hotmail.com
+-->
+
+<html lang="pt-br">
+    <head> 
+        <meta charset=”UTF-8”>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" media = "screen and (max-width: 425px)" href="../styles/styles_devices_width_lesser_425.css">
+        <link rel="stylesheet" media = "screen and (min-width: 425px) and (max-width: 768px)" href="../styles/styles_devices_width_425_768.css">
+        <link rel="stylesheet" media = "screen and (min-width: 768px)" href="../styles/styles_devices_width_greater_768.css">
+        <title>Ciência Aplicada com Python</title>
+        <meta name="description" content="Artigos com respostas científicas para perguntas com inspiração no dia a dia e algoritmos em Python">
+        <meta name="keywords" content="ciência, algoritmo, mecânica, medição, Python">
+        <meta name="author" content="Jefferson David Santos e Silva">
+        <!--
+            The following a JavaScript display engine for mathematics that works in all browsers.
+            For more information, refer to https://www.mathjax.org/#gettingstarted
+        -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+        </script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script> 
+    </head> 
+    
+    <body>
+        <div id = "menu_site_title">       
+            <div id = "menu">
+                <a href="../index.html">Home</a>
+                <a href="../todos_list.html">Todos</a>
+                <a href="../medicao_list.html">Medição</a>
+                <a href="../mecanica_list.html">Mecânica</a>
+            </div>
+
+            <div id="site_title">
+                <h1>Ciência Aplicada com Python</h1> 
+            </div>
+        </div>
+        
+        <article id="page_text">
+            <header>
+                <h1>Quanto tempo demora uma ultrapassagem?</h1> 
+                <p>
+                    <em>
+                        Sabe dizer quanto tempo você fica na pista contrária durante uma ultrapassagem? Você poderia trazer grande risco a você mesmo e aos outros passageiros! Entenda por meio deste exemplo de aplicação de física na vida real a dimensão desse risco.
+                    </em>
+                </p>
+                <p>
+                    Tempo de leitura: 8 minutos
+                </p>
+                
+                <hr>
+                
+            </header>
+            <section>
+                <h3>Introdução</h3> 
+                <p>
+                    Se você já esteve na autoestrada, a manobra de ultrapassagem já se mostrou como uma alternativa para passar menos tempo nela. Porém, essa é uma manobra que traz riscos e ter controle sobre ela reduz eles. Se você souber dizer quanto tempo a ultrapassagem durará, você estará iniciando uma manobra com a vantagem de ter uma informação adicional sobre ela e isto fará você se sentir mais seguro. Então vamos à resposta!
+                </p> 
+            </section>
+            <section>
+                <h3>Modelo</h3> 
+                <p>
+                    Recorreremos ao seguinte modelo para encontrar a resposta:
+                </p>
+                <img src="../images/quanto_tempo_demora_uma_ultrapassagem_situacao_inicial.jpg" alt="situação inicial" id = "image_width">
+                <p>
+                    Dois veículos, <em>C<sub>1</sub></em> e <em>C<sub>2</sub></em>, movem-se com velocidade constante na mesma direção e sentido, da esquerda para a direita. Chamemos este cenário de <b>situação inicial</b>.
+                    Os veículos <em>C<sub>1</sub></em> e <em>C<sub>2</sub></em> têm comprimento <em>d<sub>c<sub>1</sub></sub></em> e <em>d<sub>c<sub>2</sub></sub></em>, respectivamente. 
+                    A distância entre os veículos <em>C<sub>1</sub></em> e <em>C<sub>2</sub></em> é <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em>. 
+                </p>
+                <p>
+                    Após a ultrapassagem começar, vamos considerar que ela termina quando o veículo <em>C<sub>1</sub></em> estiver à frente do veículo <em>C<sub>2</sub></em> de uma distância igual a <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em>. Chamemos este cenário de <b>situação final</b>:
+                </p>
+                <img src="../images/quanto_tempo_demora_uma_ultrapassagem_situacao_final.jpg" alt="situação final" id = "image_width">
+                <p>
+                    Vamos desconsiderar o tempo que o carro leva para entrar na contramão, o atrito do asfalto, a resistência do vento e outras variáveis.
+                </p>
+                <p>
+                    Assumindo então que os veículos movem-se em linha reta e com velocidade constante, da análise do movimento retilíneo uniforme temos a seguinte fórmula 
+                    $$v = \frac{d}{t}$$
+                    na qual $v$, $d$ e $t$ representam a velocidade, a distância e o tempo, respectivamente. 
+                    Aqui, vamos considerar somente a velocidade escalar.
+                </p>
+                <p>
+                    Como desejamos encontrar o tempo durante o qual é realizada a ultrapassagem, ou seja $t$, e é necessário que o veículo <em>C<sub>1</sub></em> esteja com uma velocidade superior ao do veículo <em>C<sub>2</sub></em>, vamos considerar a diferença entre as velocidades dos dois veículos, $\Delta v$, ao invés de $v$. 
+                </p>
+                <p>
+                    Logo, para o veículo <em>C<sub>1</sub></em> percorrrer uma distância de $d_{c_1c_2} + d_{c_2} + d_{c_1c_2} + d_{c_1}$ sendo que a sua velocidade é superior a velocidade do veículo <em>C<sub>2</sub></em> por $\Delta v$, será necessário um tempo de aproximadamente
+                    $$t = \frac{d_{c_1} + d_{c_2} + 2 \times d_{c_1c_2}}{\Delta v}$$
+                </p>
+                <p>
+                    Ao utilizar a fórmula acima, sempre observe as unidades! Caso você deseje utilizar $\Delta v$ em <b>km/h</b>, será preciso converter os valores de distância para <b>km</b>. Neste caso, o resultado obtido para o tempo será em <em>horas</em>.
+                </p>
+                <p>
+                    Para utilizar os valores comumente pensados na prática, ou seja, a diferença de velocidades em <b>km/h</b> e as distâncias em <b>m</b> e obter o tempo de ultrapassagem em <b>s</b>, podemos utilizar a seguinte equação:
+                    $$t = \frac{\frac{d_{c_1} + d_{c_2} + 2 \times d_{c_1c_2}\; \text{km}}{1000}}{\Delta v\; \text{km/h}} \times \frac{3.600\; \text{s}}{\text{h}} \\ t = \frac{d_{c_1} + d_{c_2} + 2 \times d_{c_1c_2}}{\Delta v} \times 3,6\; \text{s}$$
+                </p>
+            </section>
+            <section id = "algoritmo_section">
+                <h3>O algoritmo</h3>
+                <p>Como base de um sistema com interfaceamento com o usuário, o algoritmo a ser utilizado deve requisitar os valores de cada um dos parâmetros de entrada.</p>
+                <p>O modelo do sistema estabelece que os parâmetros de entrada devem ser:</p>
+                <ul>
+                    <li>O comprimento do veículo que realiza a manobra de ultrapassagem;</li>
+                    <li>O comprimento do veículo a ser ultrapassado;</li>
+                    <li>A distância entre os dois veículos;</li>
+                    <li>A diferença entre as velocidades dos dois veículos.</li>
+                </ul>
+                <p>Com os valores dos parâmetros anteriores informados, o tempo de duração deve ser calculado e retornado ao usuário.</p>
+                <p>Como adicional, o usuário deve poder reexecutar o algoritmo o número de vezes desejado em sequência, informando quando não é mais necessário.</p>
+            </section>
+            <section id = "colete_dados_em_campo_section">
+                <h3>Colete os dados em campo</h3>
+                <p>
+                    Na prática, os valores das grandezas da fórmula anterior podem ser coletados da seguinte maneira:
+                </p>
+                <ul>
+                    <li>
+                        <em>d<sub>c<sub>1</sub></sub></em> é o comprimento do seu veículo em <b>m</b>.
+                    </li>
+                    <li>
+                        <em>d<sub>c<sub>2</sub></sub></em> é o comprimento do veículo a ser ultrapassado em <b>m</b>. Observe:
+                        <ul>
+                            <li>
+                                Veículos longos apresentam o seu comprimento na traseira
+                            </li>
+                            <li>
+                                A largura de um veículo varia em média entre 4 e 6,5 metros
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em> é a distância entre o seu veículo e o veículo a ser ultrapassado logo antes de começar a ultrapassagem em <b>m</b>. Observe:
+                        <ul>
+                            <li>
+                                Esta distância pode ser estimada pelo seguinte procedimento:
+                                <ol>
+                                    <li>
+                                        Mantenha uma distância constante do veículo a ser ultrapassado.
+                                    </li>
+                                    <li>
+                                        Verifique qual a velocidade do seu veículo em <b>km/h</b>. 
+                                    </li>
+                                    <li>
+                                        Conte quantos segundos leva para você passar por um mesmo ponto da estrada que o veículo a ser ultrapassado passou.
+                                    </li>
+                                    <li>
+                                        Utilize a seguinte equação para determinar a sua distância <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em> em <b>m</b> do veículo a ser ultrapassado
+                                        <br>
+                                        $$d_{c_1c_2} = \frac{5 \times v_i \times t_i}{18}\; \text{m}$$
+                                        <br>
+                                        Na qual $v_i$ e $t_i$ representam a velocidade do seu veículo em <b>km/h</b> e os segundos de distância que você está do veículo a ser ultrapassado, respectivamente.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        $\Delta v$ é a diferença entre as velocidades do seu veículo quando esse está a uma distância <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em> do veículo a ser ultrapassado e durante a ultrapassagem.
+                    </li>
+                </ul>
+            </section>
+            <section id = "aperte_o_play_section">
+                <h3>Aperte o play!</h3>
+                <p>Simule o algoritmo descrito utilizando a linguagem de programação Python:</p>
+                <iframe src="https://trinket.io/embed/python/7ec8ec9a3e?showInstructions=true" width = 99.5% height = 600em frameborder = 10em marginwidth = 0em marginheight = 0em allowfullscreen title = "Algoritmo em Python"></iframe>
+            </section>
+            <section id = "conclusao_section">
+                <h3>Conclusão</h3>
+                <p>
+                    Como exemplo, suponha os seguintes valores para as grandezas:
+                </p>
+                <ul>
+                    <li>
+                        <em>d<sub>c<sub>1</sub></sub></em> = 4 m
+                    </li>
+                    <li>
+                        <em>d<sub>c<sub>2</sub></sub></em> = 20 m
+                    </li>
+                    <li>
+                        <em>d<sub>c<sub>1</sub>c<sub>2</sub></sub></em> = 100/3 m
+                    </li>
+                    <li>
+                        $v_i$ = 60 km/h.
+                    </li>
+                </ul>
+                <p>
+                    Realizando uma ultrapassagem com velocidade igual a 70 km/h, teremos $\Delta v$ = 10 km/h. Logo, o tempo de ultrapassagem será de
+                    $$t = \frac{4 + 20 + 2 \times \frac{100}{3}}{10} \times 3,6\; \text{s} \\ t = \frac{816}{25}\; \text{s} = 32,64\; \text{s}$$
+                </p>
+                <p>
+                    O resultado revela que ultrapassar um veículo de 20 m de comprimento movendo-se a uma velocidade igual a 60 km/h com uma velocidade superior igual a 70 km/h é extremamente perigoso, pois o tempo de ultrapassagem seria muito longo.
+                </p>
+                <p>
+                    Se a velocidade de ultrapassagem for aumentada para 80 km/h, o tempo de ultrapassagem será de
+                    $$t = \frac{4 + 20 + 2 \times \frac{100}{3}}{20} \times 3,6\; \text{s} \\ t = \frac{272}{60} \times 3,6\; \text{s} \approx 16,32\; \text{s}$$
+                </p>
+                <p>
+                    Agora entendemos que ultrapassar um veículo de 20 m de comprimento movendo-se a uma velocidade igual a 60 km/h com uma velocidade superior igual a 80 km/h requer menos tempo.
+                    No entanto, a ultrapassagem ainda custará um longo tempo antes de ser completada, o que a torna arriscada.
+                    Nesse caso, é mais prudente realizar a ultrapassagem com uma velocidade superior a 80 km/h.
+                </p>
+            </section>
+        </article>          
+    </body>
+</html>
